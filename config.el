@@ -74,10 +74,11 @@
 (map! :map vterm-mode-map :after vterm
       "<M-left>" #'vterm-send-M-b)
 
-(set-popup-rules!
-  '(("^magit" :side left :size 40 :slot 1 :quit t :select t :modeline t)
-  ("^magit-diff" :side left :size 40 :slot 0 :vslot 1 :quit t :select nil :modeline t)
-  ("COMMIT_EDITMSG" :side left :size 40 :slot 0 :vslot 2 :quit nil :select t :modeline t)))
+(after! popup
+  (set-popup-rules!
+    '(("^magit" :side left :width 0.2 :quit t :select t :modeline t)
+      ("^magit-diff" :side left :width 0.25 :height 0.7 :slot 1 :quit t :select nil :modeline t)
+      ("COMMIT_EDITMSG" :side left :width 0.25 :height 0.3 :slot 2 :quit nil :select t :modeline t))))
 ;; To get information about any of these functions/macros, move the cursor over
 ;; the highlighted symbol at press 'K' (non-evil users must press 'C-c c k').
 ;; This will open documentation for it, including demos of how they are used.
