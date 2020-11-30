@@ -55,10 +55,8 @@
 (add-hook 'dired-mode-hook #'dired-hide-details-mode)
 (map! :n "-" #'dired-jump)
 
-(+global-word-wrap-mode +1)
-(setq +word-wrap-extra-indent 1)
-
 (add-hook 'prog-mode-hook #'whitespace-mode)
+(add-hook 'prog-mode-hook #'visual-line-mode)
 
 (setq whitespace-line-column nil
       whitespace-style
