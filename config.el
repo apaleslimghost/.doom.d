@@ -79,6 +79,9 @@
     '(("^magit" :side left :width 0.2 :quit t :select t :modeline t)
       ("^magit-diff" :side left :width 0.25 :height 0.7 :slot 1 :quit t :select nil :modeline t)
       ("COMMIT_EDITMSG" :side left :width 0.25 :height 0.3 :slot 2 :quit nil :select t :modeline t))))
+
+(setq evil-vsplit-window-right t)
+(setq evil-split-window-below t)
 ;; To get information about any of these functions/macros, move the cursor over
 ;; the highlighted symbol at press 'K' (non-evil users must press 'C-c c k').
 ;; This will open documentation for it, including demos of how they are used.
